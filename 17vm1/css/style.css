@@ -29,6 +29,7 @@ html{
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
+    background:#d8d8d8;
 }
 *,*:after,*:before{
     box-sizing: inherit;
@@ -108,8 +109,26 @@ html{
     left: 139px;
     font-size:72px;
     line-height:1.12;
-   color:rgb(112, 112, 112);
+    color:rgb(112, 112, 112);
 }
 .l{
     margin-bottom:0 !important;
+}
+@media (max-width: 520px) {
+.link{
+    min-width:306px;
+    
+padding:10px 75px;
+}
+.helper_block{
+    padding:0;
+    padding-top:70px;
+    padding-bottom:50px;
+    border-radius:0;
+    background:0;
+    margin:0 auto;
+}
+.main_wrapper{
+    height:auto;
+}
 }
