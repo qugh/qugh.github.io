@@ -68,6 +68,9 @@ html{
     display:flex;
     justify-content: center;
 }
+.link_wrap:last-child{
+    margin:0;
+}
 .f{
     background: pink;
 }
