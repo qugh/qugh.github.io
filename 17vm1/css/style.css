@@ -114,6 +114,34 @@ html{
 .l{
     margin-bottom:0 !important;
 }
+.b-container{
+
+    background-color: #ccc;
+    color: #fff;
+}
+.b-popup{
+    width:100%;
+    min-height:100%;
+    background-color: rgba(0,0,0,0.5);
+    overflow:hidden;
+    position:fixed;
+    top:0px;
+}
+
+.b-popup-content{
+    position:relative;
+}
+.img1{
+    position:absolute;
+    left:50%;
+    top:50%;
+    height:100vh;
+    transform: translate(-50%, -50%);
+    transition: transform .2s;
+    will-change: transform;
+    
+}
+
 @media (max-width: 520px) {
 .link{
     min-width:306px;
@@ -131,4 +159,8 @@ padding:10px 75px;
 .main_wrapper{
     height:auto;
 }
+.img1{
+    width: 100vw;
 }
+}
+
