@@ -161,8 +161,8 @@ html{
     transition: -webkit-transform .2s;
     transition: transform .2s;
     transition: transform .2s, -webkit-transform .2s;
-    will-change: transform;
-    
+    border-radius: 40px;
+    border: 2px solid rgb(52, 105, 148,1);
 }
 
 @media (max-width: 520px) {
