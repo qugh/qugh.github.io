@@ -133,6 +133,12 @@ nav a {
         padding: 0px 15px;
         margin-bottom: 60px;
         .table {
+            display: flex;
+            flex-direction: column;
+            .current_page {
+                align-self: center;
+                margin-bottom: 15px;
+            }
             tbody {
                 transition: opacity 0.3s ease-out;
             }
@@ -140,7 +146,7 @@ nav a {
                 border: 1px solid #2f80ed;
                 width: 100%;
                 background: #e0e0e0;
-                margin-bottom: 30px;
+                margin-bottom: 15px;
                 thead {
                     color: white;
                     tr {
@@ -165,6 +171,7 @@ nav a {
                 margin-bottom: 30px;
                 .pages_counter {
                     display: grid;
+                    text-align: center;
                     grid-template-columns: repeat(9, 1fr);
                     justify-items: space-between;
                     grid-gap: 19px;
@@ -235,6 +242,7 @@ nav a {
                 }
             }
             .page_to_see {
+                display:flex;
                 .elements_count {
                     color: #2f80ed;
                     background: white;
@@ -242,7 +250,37 @@ nav a {
                     box-sizing: border-box;
                     height: 30px;
                     width: 64px;
+                    margin-right:15px;
                 }
+                .jump_block{
+                    .jump_Alert{
+                        opacity:0;
+                        transition: opacity 0.3s ease-in;
+                    }
+                    display:none;
+                .jump_toThePage{
+                    color: #2f80ed;
+                    background: white;
+                    border: 1px solid #2f80ed;
+                    box-sizing: border-box;
+                    height: 30px;
+                    width: 32px; 
+                    text-align:center;
+                    margin-right:5px;
+                }
+                .jump_button{
+                    color: #000000;
+                    background: white;
+                    border: 1px solid #1e2022;
+                    box-sizing: border-box;
+                    height: 30px;
+                    margin-right:5px;
+                    text-align:center;
+                    &:hover{
+                        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+                    }
+                }
+            }
             }
         }
     }

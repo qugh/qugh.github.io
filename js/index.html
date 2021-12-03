@@ -69,6 +69,7 @@
 
                     </tbody>
                 </table>
+                <span class='current_page'></span>
                 <div class="pages">
                     <div class="back_button_container">
                         <button class="back_button">
@@ -93,7 +94,13 @@
                         <option value="25">25</option>
                         <option value="30">30</option>
                     </select>
+                    <div class="jump_block">
+                    <input class="jump_toThePage" type="text" oninput="checkValue(this)" placeholder="№" >
+                    <button class="jump_button">Jump</button>
+                    <span class='jump_Alert'></span>
                 </div>
+                </div>
+
             </div>
             <div class="news">
                 <div class="news_card">

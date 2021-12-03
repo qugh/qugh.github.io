@@ -167,6 +167,23 @@ nav a {
   margin-bottom: 60px;
 }
 
+.main_content .main_container .table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main_content .main_container .table .current_page {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-bottom: 15px;
+}
+
 .main_content .main_container .table tbody {
   -webkit-transition: opacity 0.3s ease-out;
   transition: opacity 0.3s ease-out;
@@ -176,7 +193,7 @@ nav a {
   border: 1px solid #2f80ed;
   width: 100%;
   background: #e0e0e0;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .main_content .main_container .table table thead {
@@ -214,6 +231,7 @@ nav a {
 .main_content .main_container .table .pages .pages_counter {
   display: -ms-grid;
   display: grid;
+  text-align: center;
   -ms-grid-columns: (1fr)[9];
       grid-template-columns: repeat(9, 1fr);
   justify-items: space-between;
@@ -300,6 +318,12 @@ nav a {
   color: white;
 }
 
+.main_content .main_container .table .page_to_see {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .main_content .main_container .table .page_to_see .elements_count {
   color: #2f80ed;
   background: white;
@@ -308,6 +332,45 @@ nav a {
           box-sizing: border-box;
   height: 30px;
   width: 64px;
+  margin-right: 15px;
+}
+
+.main_content .main_container .table .page_to_see .jump_block {
+  display: none;
+}
+
+.main_content .main_container .table .page_to_see .jump_block .jump_Alert {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in;
+  transition: opacity 0.3s ease-in;
+}
+
+.main_content .main_container .table .page_to_see .jump_block .jump_toThePage {
+  color: #2f80ed;
+  background: white;
+  border: 1px solid #2f80ed;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 30px;
+  width: 32px;
+  text-align: center;
+  margin-right: 5px;
+}
+
+.main_content .main_container .table .page_to_see .jump_block .jump_button {
+  color: #000000;
+  background: white;
+  border: 1px solid #1e2022;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 30px;
+  margin-right: 5px;
+  text-align: center;
+}
+
+.main_content .main_container .table .page_to_see .jump_block .jump_button:hover {
+  -webkit-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .main_content .news {
