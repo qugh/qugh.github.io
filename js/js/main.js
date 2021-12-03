@@ -212,7 +212,6 @@ nextButton.addEventListener('click', () => {
 )
 
 backButton.addEventListener('click', () => {
-
     elemsOnPage_value = +page_selector.value;
 
     if (page_number_value > 1) {
