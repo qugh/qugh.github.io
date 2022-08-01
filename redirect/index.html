@@ -6,7 +6,7 @@
         const isIos = document.querySelector('#is_ios')
         const isAndroid = document.querySelector('#is_android')
         const latency = document.querySelector('#latency')
-        const isMobile = document.querySelector('#is_mobile')
+        const is_Mobile = document.querySelector('#is_mobile')
         const USER_AGENT = (window.navigator && window.navigator.userAgent) || '';
         const IS_IPAD = /iPad/i.test(USER_AGENT);
         const isMobile = navigator.userAgentData.mobile;
@@ -25,7 +25,7 @@
         isAndroid.insertAdjacentHTML('beforebegin',`Is Android: ${isAndroid}`)
         userAgent.insertAdjacentHTML('beforebegin',`User agent: ${userAgent}`)
         latency.insertAdjacentHTML('beforebegin',`latency: ${timeout} ms`)
-        isMobile.insertAdjacentHTML('beforebegin',`is Mobile: ${isMobile}`)
+        is_Mobile.insertAdjacentHTML('beforebegin',`is Mobile: ${isMobile}`)
         setTimeout(() => {
             document.location = 'https://lk.smarthome.rt.ru/balance?section=services&modal=refill_balance';
         }, timeout);
