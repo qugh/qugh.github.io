@@ -1,12 +1,36 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <script>
+ 
+    <style>
+        .info {
+            display:flex;
+            flex-direction: column;
+            width:100vw;
+            height:100vh;
+            align-items: center;
+            justify-content: center;
+            gap:15px;
+        }
+        .info p {
+            font-size:14px;
+        }
+    </style>
+</head>
+<body>
+<div class="info">
+    <p id="latency"></p>
+    <p id="user_agent"></p>
+    <p id="is_mobile"></p>
+    <p id="is_ios"></p>
+    <p id="is_android"></p>
+</div>
+     <script>
         const userAgent = document.querySelector('#user_agent')
         const isIos = document.querySelector('#is_ios')
         const isAndroid = document.querySelector('#is_android')
         const latency = document.querySelector('#latency')
-        const is_Mobile = document.querySelector('#is_mobile')
+        const is_mobile = document.querySelector('#is_mobile')
         const USER_AGENT = (window.navigator && window.navigator.userAgent) || '';
         const IS_IPAD = /iPad/i.test(USER_AGENT);
         const isMobile = navigator.userAgentData.mobile;
@@ -25,30 +49,11 @@
         isAndroid.insertAdjacentHTML('beforebegin',`Is Android: ${isAndroid}`)
         userAgent.insertAdjacentHTML('beforebegin',`User agent: ${userAgent}`)
         latency.insertAdjacentHTML('beforebegin',`latency: ${timeout} ms`)
-        is_Mobile.insertAdjacentHTML('beforebegin',`is Mobile: ${isMobile}`)
+        is_mobile.insertAdjacentHTML('beforebegin',`is Mobile: ${isMobile}`)
         setTimeout(() => {
             document.location = 'https://lk.smarthome.rt.ru/balance?section=services&modal=refill_balance';
         }, timeout);
 
     </script>
-    <style>
-        .info {
-            display:flex;
-            flex-direction: column;
-            gap:15px;
-        }
-        .info p {
-            font-size:14px;
-        }
-    </style>
-</head>
-<body>
-<div class="info">
-    <p id="latency"></p>
-    <p id="user_agent"></p>
-    <p id="is_mobile"></p>
-    <p id="is_ios"></p>
-    <p id="is_android"></p>
-</div>
 </body>
 </html>
