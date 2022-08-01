@@ -1,7 +1,6 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
- 
     <style>
         .info {
             display:flex;
@@ -25,35 +24,35 @@
     <p id="is_ios"></p>
     <p id="is_android"></p>
 </div>
-     <script>
-        const userAgent = document.querySelector('#user_agent')
-        const isIos = document.querySelector('#is_ios')
-        const isAndroid = document.querySelector('#is_android')
-        const latency = document.querySelector('#latency')
-        const is_mobile = document.querySelector('#is_mobile')
-        const USER_AGENT = (window.navigator && window.navigator.userAgent) || '';
-        const IS_IPAD = /iPad/i.test(USER_AGENT);
-        const isMobile = navigator.userAgentData.mobile;
-        const timeout = 5000;
-        // The Facebook app's UIWebView identifies as both an iPhone and iPad, so
-        // to identify iPhones, we need to exclude iPads.
-        // http://artsy.github.io/blog/2012/10/18/the-perils-of-ios-user-agent-sniffing/
-        const IS_IPHONE = /iPhone/i.test(USER_AGENT) && !IS_IPAD;
-        const IS_IPOD = /iPod/i.test(USER_AGENT);
-        const IS_IOS = IS_IPHONE || IS_IPAD || IS_IPOD;
-        const IS_ANDROID = /Android/i.test(USER_AGENT);
-        console.log('redirect',IS_IOS,IS_ANDROID)
-        if(IS_IOS) document.location='rtsmarthome://main'
-        if(IS_ANDROID) document.location='smarthome://main'
-        isIos.insertAdjacentHTML('beforebegin',`Is IOS: ${isIos}`)
-        isAndroid.insertAdjacentHTML('beforebegin',`Is Android: ${isAndroid}`)
-        userAgent.insertAdjacentHTML('beforebegin',`User agent: ${userAgent}`)
-        latency.insertAdjacentHTML('beforebegin',`latency: ${timeout} ms`)
-        is_mobile.insertAdjacentHTML('beforebegin',`is Mobile: ${isMobile}`)
-        setTimeout(() => {
-            document.location = 'https://lk.smarthome.rt.ru/balance?section=services&modal=refill_balance';
-        }, timeout);
+<script>
+    const userAgent = document.querySelector('#user_agent')
+    const isIos = document.querySelector('#is_ios')
+    const isAndroid = document.querySelector('#is_android')
+    const latency = document.querySelector('#latency')
+    const is_mobile = document.querySelector('#is_mobile')
+    const USER_AGENT = (window.navigator && window.navigator.userAgent) || '';
+    const IS_IPAD = /iPad/i.test(USER_AGENT);
+    const isMobile = navigator.userAgentData.mobile;
+    const timeout = 5000;
+    // The Facebook app's UIWebView identifies as both an iPhone and iPad, so
+    // to identify iPhones, we need to exclude iPads.
+    // http://artsy.github.io/blog/2012/10/18/the-perils-of-ios-user-agent-sniffing/
+    const IS_IPHONE = /iPhone/i.test(USER_AGENT) && !IS_IPAD;
+    const IS_IPOD = /iPod/i.test(USER_AGENT);
+    const IS_IOS = IS_IPHONE || IS_IPAD || IS_IPOD;
+    const IS_ANDROID = /Android/i.test(USER_AGENT);
+    console.log('redirect',IS_IOS,IS_ANDROID)
+    if(IS_IOS) document.location='rtsmarthome://main'
+    if(IS_ANDROID) document.location='smarthome://main'
+    isIos.insertAdjacentHTML('beforebegin',`Is IOS: ${IS_IOS}`)
+    isAndroid.insertAdjacentHTML('beforebegin',`Is Android: ${IS_ANDROID}`)
+    userAgent.insertAdjacentHTML('beforebegin',`User agent: ${USER_AGENT}`)
+    latency.insertAdjacentHTML('beforebegin',`latency: ${timeout} ms`)
+    is_mobile.insertAdjacentHTML('beforebegin',`is Mobile: ${isMobile}`)
+    setTimeout(() => {
+        document.location = 'https://lk.smarthome.rt.ru/balance?section=services&modal=refill_balance';
+    }, timeout);
 
-    </script>
+</script>
 </body>
 </html>
